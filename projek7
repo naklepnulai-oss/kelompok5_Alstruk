@@ -1,1 +1,35 @@
+import tkinter as tk
+from tkinter import simpledialog, messagebox
 
+def main():
+    # Inisialisasi root window (disembunyikan)
+    root = tk.Tk()
+    root.withdraw()
+
+    # Input panjang dan lebar
+    input_panjang = simpledialog.askstring("Input", "Masukkan panjang:")
+    input_lebar = simpledialog.askstring("Input", "Masukkan lebar:")
+
+    # Validasi input
+    if input_panjang is None or input_lebar is None:
+        messagebox.showinfo("Batal", "Input dibatalkan oleh pengguna.")
+        return
+
+    try:
+        panjang = float(input_panjang)
+        lebar = float(input_lebar)
+    except ValueError:
+        messagebox.showerror("Error", "Input harus berupa angka!")
+        return
+
+    # Hitung luas dan keliling
+    luas = panjang * lebar
+    keliling = 2 * (panjang + lebar)
+
+    # Tampilkan hasil
+    pesan = f"Luas Persegi Panjang: {luas}\nKeliling Persegi Panjang: {keliling}"
+    messagebox.showinfo("Hasil", pesan)
+
+
+if __name__ == "__main__":
+    main()
