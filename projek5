@@ -1,1 +1,12 @@
+def main():
+    angka1 = 10
+    angka2 = 20
+    angka3 = 45
 
+    total = angka1 + angka2 + angka3
+    rata_rata = total / 3
+
+    print("Angka 1:", angka1)
+    print("Angka 2:", angka2)
+    print("Angka 3:", angka3)
+    print("Rata-rata:", rata_rata)
