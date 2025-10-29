@@ -1,1 +1,15 @@
+def main():
+    number = 10
+    letter = 'a'
+    result = True
+    string = "hello"
 
+    # Menampilkan nama variabel dan nilainya
+    print("number =", number)
+    print("letter =", letter)
+    print("result =", result)
+    print("string =", string)
+
+
+if __name__ == "__main__":
+    main()
